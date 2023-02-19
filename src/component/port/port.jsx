@@ -51,7 +51,7 @@ const port = () => {
         <Swiper className='container portfolio_container'
         // install Swiper modules
         modules={[ Pagination]}
-        spaceBetween={40}
+        spaceBetween={50}
         slidesPerView={2}
       
         pagination={{ clickable: true }}
