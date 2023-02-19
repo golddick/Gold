@@ -1,8 +1,7 @@
 import React from 'react'
 import './footer.css'
-import {AiFillFacebook} from 'react-icons/ai'
-import {AiFillInstagram} from 'react-icons/ai'
-import {AiFillTwitterSquare} from 'react-icons/ai'
+import {HiOutlineMail} from 'react-icons/hi'
+import {RiWhatsappFill} from 'react-icons/ri'
 
 
 const footer = () => {
@@ -14,16 +13,13 @@ const footer = () => {
   <li><a href='#'>Home</a></li>
   <li><a href='about'>About</a></li>
   <li><a href='#exp'>Experience</a></li>
-  <li><a href='#services'>sevices</a></li>
   <li><a href='#port'>Portfolio</a></li>
-  <li><a href='#test'>Testimoinals</a></li>
   <li><a href='#contact'>Contact</a></li>
 </ul>
 
     <div className='footer_socials'>
-      <a href='https://facebook.com'><AiFillFacebook/></a>
-      <a href='https://instagram.com'><AiFillInstagram/></a>
-      <a href='https://twitter.com'><AiFillTwitterSquare/></a>
+      <a href='https://api.whatsapp.com/send?phone=+2348065591354'   target="_blank" rel="noopener noreferrer"><RiWhatsappFill/></a>
+      <a href='mailto:golddick60@gmail.com' target="_blank" rel="noopener noreferrer"><HiOutlineMail/></a>
     </div>
 
       <div className='footer_copyright'>

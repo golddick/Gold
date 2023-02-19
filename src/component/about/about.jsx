@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import BENZ from '../../assests/007.jpg'
+import ABOUT from '../../assests/about.jpeg'
 import {FaAward} from 'react-icons/fa' 
 import {FiUsers} from 'react-icons/fi'
 import {BsFolder2} from 'react-icons/bs'
@@ -14,7 +14,7 @@ const about = () => {
     <div className="container about_container">
       <div className='about_me'>
         <div className='about_me-image'>
-          <img src={BENZ} alt='About Image' />
+          <img src={ABOUT} alt='About Image' />
         </div>
       </div>
 
@@ -35,17 +35,13 @@ const about = () => {
         < article className='about_card'>
           <BsFolder2 className='about_icon' />
         <h5>Project</h5>
-        <small>80+ completed</small>
+        <small>4+ completed</small>
         </article>
       </div>
 
       <p>
         
-        It’s the ultimate sports car experience. Completely driver-centric and performance oriented, 
-        the 570S Coupé is equally at home on the track as it is on the open road. With the lightest
-         weight in its class and the highest power to weight ratio, it delivers super car punch and thrills that would 
-        shame many more expensive rivals.
-
+      I am a Software Engineer with proficiency in frontend web development. I have extensive knowledge of HTML, CSS, JavaScript, and React. As a software engineer, My objective as a software engineer is to aid in the implementation of creative concepts and demonstrate my commitment to developing first-rate software solutions for companies.
       </p>
 
       <a href='#contact' className='btn btn-primary'>Let's Talk</a>

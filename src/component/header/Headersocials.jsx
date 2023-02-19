@@ -6,10 +6,10 @@ import {AiFillFacebook} from 'react-icons/ai'
 const Headersocials = () => {
   return (
     <div className='header_socials'>
-        <a href='https://linkedin.com' target="_blank"><FaLinkedin /></a>
-        <a href='https://github.com' target="_blank"><AiOutlineGithub /></a>
-        <a href='https://instagram.com' target="_blank"> <AiFillInstagram /></a>
-        <a href='https://facebook.com' target="_blank"> <AiFillFacebook /></a>
+        <a href='https://www.linkedin.com/in/golddick/' target="_blank"><FaLinkedin /></a>
+        <a href='https://github.com/golddick/' target="_blank"><AiOutlineGithub /></a>
+        <a href='#' target="_blank"> <AiFillInstagram /></a> 
+        <a href='#' target="_blank"> <AiFillFacebook /></a>
     </div>
   )
 }

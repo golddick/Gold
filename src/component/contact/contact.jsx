@@ -1,5 +1,4 @@
-import React from 'react'
-import {useRef as UseRef } from 'react';
+import {useRef as UseRef, useState as UseState } from 'react';
 import './contact.css'
 import {HiOutlineMail} from 'react-icons/hi'
 import {RiWhatsappFill}  from 'react-icons/ri'
@@ -10,12 +9,21 @@ const contact = () => {
 
   const form = UseRef ();
   const sendEmail = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    emailjs.sendForm('service_8xios8u', 'template_objf7d7', form.current, 'CAv9SNqpSwCTqTx9e')
-      
+    emailjs.sendForm('service_nzdqm1t', 'template_cnm78ht', form.current, '0pHWuzQhFnWgjT6uZ')
+    .then((result) => {
+      console.log(result.text);
+      alert('Message sent successfully!');
+    }, (error) => {
+      console.log(error.text);
+    });
+
     e.target.reset()
+    
   };
+
+
 
   return (
     <section id='contact'>
@@ -26,30 +34,32 @@ const contact = () => {
         <div className='contact_options' >
           <article className='contact_option'>
             <HiOutlineMail className='contact_option-icon'/>
-            <h4>Messenger</h4>
-            <h5>samloko money</h5>
-            <a href='https://m.me/' target='_blank'>Send message</a>
+            <h4>Mail</h4>
+            <h5>golddick60@gmail.com</h5>
+            <a href='mailto:golddick60@gmail.com' target="_blank" rel="noopener noreferrer">Send message</a>
           </article>
-          <article className='contact_option'>
+          {/* <article className='contact_option'>
             <RiWhatsappFill className='contact_option-icon'/>
             <h4>whatsApp</h4>
             <h5>+08065.....</h5>
             <a href='https://wa.me/+19204746349'target='_blank'>Send mail</a>
-          </article>
+          </article> */}
           <article className='contact_option'>
             <RiWhatsappFill className='contact_option-icon'/>
             <h4>whatsApp</h4>
-            <h5>+1324....</h5>
-            <a href='https://api.whatsapp.com/send?phone=+19204746349' target='_blank'>Send mail</a>
+            <h5>+234....</h5>
+            <a href='https://api.whatsapp.com/send?phone=+2348065591354' target="_blank" rel="noopener noreferrer">Send mail</a>
           </article>
         </div>
         {/*END OF CONTACT OPTION*/}
         <form ref={form} onSubmit={sendEmail} > 
-          <input type='text' name='name' placeholder='Your full Name' required/>
-          <input type= 'email' name='email' placeholder='Your Mail' required/>
+        <input type='text' name='subject' placeholder='Subject' required/>
+          <input type='text' name='name' placeholder='Your full Name'  required/>
+          <input type= 'email' name='email' placeholder='Your Mail'   required/>
           <textarea name='message' rows='7' placeholder='Your message' required/>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
-
+          <div>
+          <button type='submit' className='btn btn-primary' >Send Message</button>
+          </div>
         </form>
       </div>
 

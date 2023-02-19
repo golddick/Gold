@@ -1,55 +1,45 @@
 import React from 'react'
 import './port.css'
-import CAR from  '../../assests/014.jpg'
-import CAR1 from  '../../assests/013.jpg'
-import CAR2 from  '../../assests/005.jpg'
-import CAR3 from  '../../assests/008.jpg'
-import CAR4 from  '../../assests/016.jpg'
-import CAR5 from  '../../assests/015.jpg'
+import Gchat from  '../../assests/gchat.png'
+import Chatgpt from  '../../assests/gchatgpt.png'
+import Ecomm from  '../../assests/ecomm.png'
+import { Pagination } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const data = [
   {
     id: 1,
-    image: CAR,
-    title: 'My Energy drink',
-    github: '',
-    demo: 'https://www.chevrolet.com/performance/corvette'
+    image: Ecomm,
+    title: 'Sellz',
+    desc: 'Sellz is a business application for a website that deals with the sale of clothing ',
+    stack:'HTML, CSS, JavaScript',
+    github: 'https://github.com/golddick/sellz-ecomm',
+    demo: 'https://sellz-ecomm.vercel.app/'
   },
   {
     id: 2,
-    image: CAR1,
-    title: 'My Energy drink',
-    github: '',
-    demo: 'https://www.chevrolet.com/performance/corvette'
+    image: Gchat,
+    title: 'G-Chat',
+    desc: 'G-chat is a social media platform and is able to route through pages',
+    stack:'React JS, CSS',
+    github: 'https://github.com/golddick/g-chat',
+    demo: 'https://g-chat-nine.vercel.app/'
   },
   {
     id: 3,
-    image: CAR2,
-    title: 'My Energy drink',
-    github: '',
-    demo: 'https://www.chevrolet.com/performance/corvette'
+    image: Chatgpt,
+    title: 'G-Chatgpt',
+    desc: 'G-chatgpt is a chat bot that makes intaraction with an OpenAPI key Endpoint',
+    stack:'Vite JS, CSS',
+    github: 'https://github.com/golddick/chat_ai',
+    demo: 'https://chat-ai-iota.vercel.app/'
   },
-  {
-    id: 4,
-    image: CAR3,
-    title: 'My Energy drink',
-    github: '',
-    demo: 'https://www.chevrolet.com/performance/corvette'
-  },
-  {
-    id: 5,
-    image: CAR4,
-    title: 'My Energy drink',
-    github: '',
-    demo: 'https://www.chevrolet.com/performance/corvette'
-  },
-  {
-    id: 6,
-    image: CAR5,
-    title: 'My Energy drink',
-    github: '',
-    demo: 'https://www.chevrolet.com/performance/corvette'
-  },
+
 ]
 
 const port = () => {
@@ -58,35 +48,35 @@ const port = () => {
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
 
-      <div className='container portfolio_container'>
-        {/* <article className='portfolio_item'>
-          <div className='portfolio_item-image'>
-            <img src={CAR} alt = ''/>
-          </div>
-          <h3>This is a portfilio item title</h3>
-          <div className='portfolio_item-cta'>
-          < a href='' className='btn' target='_blank'>Github</a>
-          < a href='https://www.chevrolet.com/performance/corvette' className='btn btn-primary' target='_blank'>Live Demo</a>
-          </div>
-        </article> */}
+        <Swiper className='container portfolio_container'
+        // install Swiper modules
+        modules={[ Pagination]}
+        spaceBetween={40}
+        slidesPerView={2}
+      
+        pagination={{ clickable: true }}
+  
+      >
        {
-         data.map(({id, image, title, github, demo}) => {
+         data.map(({id, image, title,desc,stack, github, demo}) => {
            return(
-            <article key={id} className='portfolio_item'>
+            <SwiperSlide key={id} className='portfolio_item'>
             <div className='portfolio_item-image'>
               <img src={image} alt ={title} />
             </div>
             <h3>{title}</h3>
+            <p>{desc}</p>
+            <p><i>{stack}</i></p>
             <div className='portfolio_item-cta'>
             < a href= {github} className='btn' target='_blank'>Github</a>
             < a href= {demo} className='btn btn-primary' target='_blank'>Live Demo</a>
             </div>
-          </article>
+          </SwiperSlide>
            )
          })
        }
-      </div>
-    </section>
+        </Swiper>
+         </section>
   )
 }
 
