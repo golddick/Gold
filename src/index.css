@@ -23,8 +23,8 @@
     --transition: all 400ms ease; 
 
     --container-width-lg: 75%;
-    --conttainer-width-md:86%;
-    --cintainer-width-sm:90%;
+    --conttainer-width-md:75%;
+    --cintainer-width-sm:75%;
 }
 
 html {
@@ -47,6 +47,7 @@ body {
 .container {
     width: var(--container-width-lg);
     margin:0 auto;
+    padding: 20px;
 }
 
 h1,
@@ -118,9 +119,10 @@ section > h2,
  }
 
  /* MEDIA QUERIES (SMALL DEVICES)*/
- @media screen and  (max-width: 600px) {
+ @media screen and  (max-width: 100%) {
      .container{
          width: var(--container-width-sm);
+         padding: 20px;
      }
      section > h2 {
         margin-bottom: 6rem;

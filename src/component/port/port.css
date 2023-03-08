@@ -1,20 +1,16 @@
 .portfolio_container {
-    /* display: grid;
-    gap: 2rem; 
-    width: 30px;
-padding-bottom: 4rem; */
-height: 600px; /* Set the height of the container */
-  width: 30px; /* Set the width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  display: flex; /* Use flexbox layout */
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+   height: auto; 
+  width: 30px; 
+  margin: 0 auto; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
   overflow: scroll;
 }
 
 .portfolio_item {
     background: var(--color-black);
-    padding: 1.3rem;
+    padding: 1rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
@@ -27,13 +23,11 @@ height: 600px; /* Set the height of the container */
 
 .portfolio_item-image {
     border-radius: 1rem;
-    overflow: hidden;
-    height:40%;
+    overflow: scroll;
+    height:50%;
 }
 
-.portfolio_item h3 {
-    margin: 1.2rem 0 2rem;
-}
+
 
 .portfolio_item-cta {
     display: flex;
@@ -41,37 +35,44 @@ height: 600px; /* Set the height of the container */
     margin-bottom: 1rem;
 }
 
-.swiper-pagination-clickable .swiper-pagination-bullet {
-    background: var(--color-primary);   
+  
+  .mySwiper .swiper-button-prev,
+  .mySwiper .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-black);
   }
+  
 
- /* MEDIA QUERIES (MEDIDUM DEVICES) */
+
+  /* MEDIA QUERIES (MEDIDUM DEVICES) */
  @media  screen and (max-width: 1024px) {
-   .portfolio_container {
-       grid-template-columns: 1fr;
-       gap: 1rem;
-   }
-   .portfolio_item-cta{
-    flex-direction: column;
-    overflow: scroll;
-   }
- 
+    .container {
+       width: var(--container-width-md);
+    }
+    section {
+        margin-top: 6rem;
+    }
+
 }
 
 /* MEDIA QUERIES (SMALL DEVICES)*/
 @media screen and  (max-width: 600px) {
-   .portfolio_container {
-       /* grid-template-columns: 1fr;
-       gap: 1rem; */
-       flex-direction: column;
-     gap: 1rem;
-     overflow: scroll;
-     height: 50pc;
-   }
+    .container{
+        width: var(--container-width-sm);
+        padding: 20px;
+        height: auto;
+    }
+    .portfolio_container {
+        padding:20px;
+    }
+   .portfolio_item-cta {
+    height: 50px;
+}
 
-   .portfolio_item-cta{
-    flex-direction: column;
-    overflow: scroll;
-   }
-   
 }

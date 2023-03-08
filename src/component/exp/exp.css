@@ -1,7 +1,8 @@
 .experience_container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr ;
     gap: 2rem;
+    justify-content: center;
 }
 
 .experience_container > div {
@@ -28,11 +29,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr ;
     row-gap: 2rem;
+ height: auto;
 }
 
 .experience_details {
-    display: flex;
+    display:flex;
     gap: 1rem;
+    height: 500%;
+    width: 100%;
 }
 
 .experience_detail-icon {
@@ -40,27 +44,128 @@
     color: var(--color-primary);
 }
 
+.experience_backend{
+    width: 40pc;
+    height: 20pc;
+}
+ 
+.item-image{
+  width: 50px;
+  height: 50px;
+  display: none;
+  
+}
+  
+  .mySwiper .swiper-button-prev,
+  .mySwiper .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    
+  }
+  
+  .mySwiper .swiper-button-prev {
+    left: -18;
+  }
+  
+  .mySwiper .swiper-button-next {
+    right: -18;
+  }
+
+        
+  /* .swiper-pagination {
+    background-color: greenyellow;
+    
+  } */
+  .mySwiper .swiper-pagination {
+    display: flex;
+    justify-content: center;
+   top: 90%;
+  
+  }
+  
+  
+  .mySwiper .swiper-pagination-bullet-active {
+    background-color:  var(--color-primary);
+  }
+  
+  
+  
+  
+    
+
+
 /* MEDIA QUERIES (MEDIDUM DEVICES) */
 @media  screen and (max-width: 1024px) {
    .experience_container {
-       grid-template-columns: 1fr;
-   }
+    grid-template-columns: 1fr;
+    width: var(--container-width-md);
+    padding: 20px;
+    height: auto;
+  }
 
    .experience_container > div {
-        width: 80%;
+        width: 700px;
         padding: 2rem;
         margin: 0 auto;
    }
+   .item-image{
+    display: block;
+  }
+  
 }
+
 
 /* MEDIA QUERIES (SMALL DEVICES)*/
 @media screen and  (max-width: 600px) {
+
+  .container{
+      width: var(--container-width-sm);
+      padding: 20px;
+      height: auto;
+  }
+
     .experience_container {
-        gap: 1rem;
+        width: var(--container-width-sm);
+        padding: 20px;
+        height: auto;
+        grid-template-columns: 1fr ;
     }
 
     .experience_container > div {
-        width: 100%;
-        padding: 2rem 2rem;
+        width: 350px;
+        max-width: 600px;  
+        padding: 10px;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
     }
+
+    .experience_content {
+   width: var(--container-width-sm);
+        padding: 20px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: scroll;
+        border-radius: 20px;
+  }
+  .experience_details {
+    display:flex;
+    gap: 1rem;
+    height: auto;
+    width:auto;
 }
+
+.item-image{
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+}
+}
+
+
+

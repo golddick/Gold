@@ -3,13 +3,15 @@ import './port.css'
 import Gchat from  '../../assests/gchat.png'
 import Chatgpt from  '../../assests/gchatgpt.png'
 import Ecomm from  '../../assests/ecomm.png'
-import { Pagination } from 'swiper';
+import { Pagination,  EffectFade, Navigation } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import "swiper/css/effect-fade";
+import 'swiper/css/navigation'
 
 const data = [
   {
@@ -35,7 +37,7 @@ const data = [
     image: Chatgpt,
     title: 'G-Chatgpt',
     desc: 'G-chatgpt is a chat bot that makes intaraction with an OpenAPI key Endpoint',
-    stack:'Vite JS, CSS',
+    stack:'React JS, CSS',
     github: 'https://github.com/golddick/chat_ai',
     demo: 'https://chat-ai-iota.vercel.app/'
   },
@@ -48,15 +50,40 @@ const port = () => {
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
 
-        <Swiper className='container portfolio_container'
-        // install Swiper modules
-        modules={[ Pagination]}
-        spaceBetween={50}
-        slidesPerView={2}
-      
-        pagination={{ clickable: true }}
-  
+        
+        <div className='container portfolio_container'>
+        {/* //install Swiper modules
+        // modules={[ Pagination]}
+        // spaceBetween={50}
+        // slidesPerView={1}
+        // pagination={{ clickable: true }}
+        // breakpoints={{
+        //   640: {
+        //     slidesPerView: 1
+        //   },
+        //   1024: {
+        //     slidesPerView: 2
+        //   }
+        // }} */}
+       <>
+      <Swiper
+        spaceBetween={30}
+        effect={"slide"}
+        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+            640: {
+              slidesPerView: 1
+            },
+            1024: {
+              slidesPerView: 2
+            }}}
+        modules={[EffectFade, Navigation, Pagination]}
+        className="mySwiper"
       >
+
        {
          data.map(({id, image, title,desc,stack, github, demo}) => {
            return(
@@ -73,9 +100,12 @@ const port = () => {
             </div>
           </SwiperSlide>
            )
-         })
+         }) 
        }
-        </Swiper>
+       </Swiper>
+       </>
+       
+        </div>
          </section>
   )
 }
