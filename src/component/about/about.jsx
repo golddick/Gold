@@ -41,7 +41,7 @@ const about = () => {
 
       <p>
         
-      I am a Software Engineer with proficiency in frontend web development. I have extensive knowledge of HTML, CSS, JavaScript, and React. As a software engineer, My objective as a software engineer is to aid in the implementation of creative concepts and demonstrate my commitment to developing first-rate software solutions for companies.
+      I am a Software Engineer with proficiency in frontend web development. I have extensive knowledge of HTML, CSS, JavaScript, and React JS. As a software engineer, my objective  is to aid in the implementation of creative concepts and demonstrate my commitment to developing first-rate software solutions for companies.
       </p>
 
       <a href='#contact' className='btn btn-primary'>Let's Talk</a>
