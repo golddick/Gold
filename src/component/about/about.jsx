@@ -26,11 +26,11 @@ const about = () => {
         <small>3+ years working</small>
         </article>
         
-        < article className='about_card'>
+        {/* < article className='about_card'>
           <FiUsers className='about_icon' />
         <h5>Clients</h5>
-        <small>3+ years working</small>
-        </article>
+        <small>3+ y</small>
+        </article> */}
 
         < article className='about_card'>
           <BsFolder2 className='about_icon' />
