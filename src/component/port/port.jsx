@@ -3,6 +3,7 @@ import './port.css'
 import Gchat from  '../../assests/gchat.png'
 import Chatgpt from  '../../assests/gchatgpt.png'
 import Ecomm from  '../../assests/ecomm.png'
+import Admin from '../../assests/admindashboard.png'
 import { Pagination,  EffectFade, Navigation } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -41,7 +42,15 @@ const data = [
     github: 'https://github.com/golddick/chat_ai',
     demo: 'https://chat-ai-iota.vercel.app/'
   },
-
+ {
+    id: 4,
+    image: Admin,
+    title: 'Admin-dashboard',
+    desc: '',
+    stack:'React JS, CSS',
+    github: 'https://github.com/golddick/admin-dashboard.git',
+    demo: 'https://admin-golddick.vercel.app/'
+  },
 ]
 
 const port = () => {

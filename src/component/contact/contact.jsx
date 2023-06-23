@@ -36,7 +36,7 @@ const contact = () => {
             <HiOutlineMail className='contact_option-icon'/>
             <h4>Mail</h4>
             <h5>golddick60@gmail.com</h5>
-            <a href='mailto:golddick60@gmail.com' target="_blank" rel="noopener noreferrer">Send message</a>
+            <a href='mailto:golddick60@gmail.com' target="_blank" rel="noopener noreferrer">Send mail</a>
           </article>
           {/* <article className='contact_option'>
             <RiWhatsappFill className='contact_option-icon'/>
@@ -48,7 +48,7 @@ const contact = () => {
             <RiWhatsappFill className='contact_option-icon'/>
             <h4>whatsApp</h4>
             <h5>+234....</h5>
-            <a href='https://api.whatsapp.com/send?phone=+2348065591354' target="_blank" rel="noopener noreferrer">Send mail</a>
+            <a href='https://api.whatsapp.com/send?phone=+2348065591354' target="_blank" rel="noopener noreferrer">Send message</a>
           </article>
         </div>
         {/*END OF CONTACT OPTION*/}
