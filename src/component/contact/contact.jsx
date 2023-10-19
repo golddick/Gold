@@ -20,7 +20,7 @@ const contact = () => {
     });
 
     e.target.reset()
-    
+     
   };
 
 

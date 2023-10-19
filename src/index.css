@@ -126,7 +126,7 @@ section > h2,
          width: var(--container-width-sm);
          padding: 20px;
      }
-     section > h2 {
+     /* section > h2 {
         margin-bottom: 6rem;
-    }
+    } */
  }

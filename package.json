@@ -14,7 +14,7 @@
     "react-router-dom": "^6.3.0",
     "react-script": "^2.0.5",
     "react-scripts": "^5.0.1",
-    "swiper": "^8.4.7",
+    "swiper": "^10.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,7 +43,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/golddick/portfolio.git"
@@ -52,5 +51,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/golddick/portfolio/issues"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3"
   }
 }

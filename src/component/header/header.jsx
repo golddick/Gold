@@ -9,11 +9,11 @@ const header = () => {
       <div className='container header_container'>
         <h5>Hello I'm</h5>
         <h1>Gold Dick</h1>
-        <h5 className='text-light'>Front-end Developer</h5>
+        <h5 className='text-light'>Software Engineer </h5>
         <CTA />
-        <Headersocials />
+        <Headersocials /> 
         <div className='car'>
-          <img src={HEADER} alt="car"/>
+          <img src={HEADER} alt="car" className='HeaderImg'/>
         </div>
 
         <a href="#contact" className='scroll_down'>Scroll Down</a>

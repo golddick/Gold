@@ -1,12 +1,12 @@
 header{
-    height: 100vh;
-    padding-top: 7rem;
+    height: 100%;
     overflow: hidden;
 }
 .header_container{
     text-align: center;
-    height: 100%;
+    height: auto;
     position: relative;
+   /* background-color: aqua; */
 }
 
 /* CTA */
@@ -41,14 +41,24 @@ header{
 
 .car {
     background:linear-gradient(var(--color-primary));
-    width: 22rem;
-    height: 40rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 2rem;
-    border-radius: 12rem 12rem 0 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    /* position: absolute; */
+    /* left: calc(50% - 11rem); */
+    /* margin-top: 2rem; */
+    /* border-radius: 12rem 12rem 0 0; */
     overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.5rem;
+
+}
+
+.HeaderImg{
+width: 200px;
+height: 200px;
+border-radius: 12rem 12rem 0 0; 
 }
 
 /* scroll_down */
