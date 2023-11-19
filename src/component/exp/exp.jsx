@@ -94,10 +94,21 @@ const exp = () => {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="myExpSwiper"
       >
         
           <div className='experience_content'>
+          <SwiperSlide>
+            <article className='experience_details'>
+              <BsFillPatchCheckFill className='experience_detail-icon' />
+              <div><h4>Frontend Engineer  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 months </h4>
+             <h4> <small className='text-light'>Freelancing </small></h4>
+              <h4><small className='text-light'>&nbsp;*<i>Built a website using React JS</i></small></h4>
+              <h4><small className='text-light'>&nbsp;*<i>Consumed API</i></small></h4>
+              {/* <h4><small className='text-light'>&nbsp;*<i>Built Front-end website</i></small></h4> */}
+              </div>
+            </article>
+            </SwiperSlide>
           <SwiperSlide>
             <article className='experience_details'>
               <BsFillPatchCheckFill className='experience_detail-icon' />
@@ -130,7 +141,6 @@ const exp = () => {
               </div>
             </article>
             </SwiperSlide>
-            <div class="pagination" style={{backgroundColor: 'yellow'}}></div>
           </div>
            </Swiper>
           </div>

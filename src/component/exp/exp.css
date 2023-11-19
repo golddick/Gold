@@ -28,8 +28,9 @@
 .experience_content {
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    row-gap: 2rem;
+    gap: 2rem;
  height: auto;
+ /* background-color: brown; */
 }
 
 .experience_details {
@@ -46,7 +47,9 @@
 
 .experience_backend{
     width: 40pc;
-    height: 20pc;
+    height: 400px;
+    /* background-color: yellow !important; */
+    overflow: hidden;
 }
  
 .item-image{
@@ -55,9 +58,35 @@
   display: none;
   
 }
+
+.myExpSwiper{
+  /* background-color: red; */
+  height: 300px;
+}
+
+/* Target the pagination container */
+.myExpSwiper .swiper-pagination {
+  color: white; 
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Style the pagination bullets (dots) */
+.myExpSwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: white; 
+  margin: 0 5px; 
+  border-radius: 50%; 
+}
+
+/* Style the active (current) bullet */
+.myExpSwiper .swiper-pagination-bullet-deactive {
+  background-color: black; /* Change the active bullet color */
+}
   
-  .mySwiper .swiper-button-prev,
-  .mySwiper .swiper-button-next {
+  .myExpSwiper .swiper-button-prev,
+  .myExpSwiper .swiper-button-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -68,11 +97,11 @@
     
   }
   
-  .mySwiper .swiper-button-prev {
+  .myExpSwiper .swiper-button-prev {
     left: -18;
   }
   
-  .mySwiper .swiper-button-next {
+  .myExpSwiper .swiper-button-next {
     right: -18;
   }
 

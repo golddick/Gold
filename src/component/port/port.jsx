@@ -4,7 +4,9 @@ import Gchat from  '../../assests/gchat.png'
 import Chatgpt from  '../../assests/gchatgpt.png'
 import Ecomm from  '../../assests/ecomm.png'
 import Admin from '../../assests/admindashboard.png'
-import { Pagination,  EffectFade, Navigation } from 'swiper/modules';
+import Afrimart from '../../assests/afrimart.png'
+import Topme from '../../assests/topme.png'
+import { Pagination,  EffectFade, Navigation, Grid } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,6 +15,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import "swiper/css/effect-fade";
 import 'swiper/css/navigation'
+import 'swiper/css/grid';
 
 const data = [
   {
@@ -51,6 +54,24 @@ const data = [
     github: 'https://github.com/golddick/admin-dashboard.git',
     demo: 'https://admin-golddick.vercel.app/'
   },
+  {
+    id: 5,
+    image: Afrimart,
+    title: 'Afrimart E-commerce',
+    desc: 'This A product profile that speaks  about the organization and what they offer ',
+    stack:'React JS,JavaScript, CSS',
+    github: 'https://github.com/golddick/AfrimartCom',
+    demo: 'https://afrimart-commerce.vercel.app/'
+  },
+ {
+    id: 6,
+    image: Topme,
+    title: 'TopMe',
+    desc: '',
+    stack:'React JS,JavaScript, SCSS',
+    github: 'https://github.com/golddick/topme',
+    demo: 'https://topme.vercel.app/'
+  },
 ]
 
 const port = () => {
@@ -66,19 +87,75 @@ const port = () => {
         spaceBetween={30}
         effect={"slide"}
         navigation={true}
+        grid={{
+          rows: 2,
+          fill: "row",
+        }}
         pagination={{
           clickable: true,
         }}
         breakpoints={{
-            640: {
-              slidesPerView: 1
-            },
-            1024: {
-              slidesPerView: 2
-            }}}
-        modules={[EffectFade, Navigation, Pagination]}
+             300: {
+               slidesPerView: 1,
+               spaceBetween: 20,
+               grid: {
+                 rows: 2,
+                 fill: "row", 
+               },
+             },
+             600: {
+               slidesPerView: 2,
+               spaceBetween: 20,
+               grid: {
+                rows: 2,
+                fill: "row",
+              },
+             },
+             1000: {
+               slidesPerView:3,
+               spaceBetween: 20,
+             },
+           }}
+          
+        modules={[EffectFade, Navigation, Pagination, Grid]}
         className="mySwiper"
       >
+         {/* <Swiper
+       slidesPerView={2}      
+       spaceBetween={30}
+       grid={{
+         rows: 2,
+         fill: "row",
+       }}
+       navigation={{
+         nextEl: null, 
+         prevEl: null, 
+       }}
+      //  breakpoints={{
+      //    300: {
+      //      slidesPerView: 1,
+      //      spaceBetween: 20,
+      //      grid: {
+      //        rows: 2,
+      //        fill: "row", 
+      //      },
+      //    },
+      //    600: {
+      //      slidesPerView: 2,
+      //      spaceBetween: 20,
+      //      grid: {
+      //       rows: 2,
+      //       fill: "row",
+      //     },
+      //    },
+      //    1000: {
+      //      slidesPerView:3,
+      //      spaceBetween: 20,
+      //    },
+      //  }}
+       modules={[EffectFade, Navigation, Pagination]}
+       className="mySwiper"
+    > */}
 
        {
          data.map(({id, image, title,desc,stack, github, demo}) => {
